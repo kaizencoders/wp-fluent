@@ -1,7 +1,7 @@
-<?php namespace WpFluent\QueryBuilder;
+<?php namespace KaizenCoders\WpFluent\QueryBuilder;
 
-use WpFluent\Connection;
-use WpFluent\Exception;
+use KaizenCoders\WpFluent\Connection;
+use KaizenCoders\WpFluent\Exception;
 
 class QueryBuilderHandler
 {
@@ -73,7 +73,7 @@ class QueryBuilderHandler
 
         // Query builder adapter instance
         $this->adapterInstance = $this->container->build(
-            '\\WpFluent\\QueryBuilder\\Adapters\\' . ucfirst($this->adapter),
+            '\\KaizenCoders\\WpFluent\\QueryBuilder\\Adapters\\' . ucfirst($this->adapter),
             array($this->connection)
         );
     }
@@ -128,7 +128,7 @@ class QueryBuilderHandler
     public function query($sql, $bindings = array())
     {
         $this->dbStatement = $this->container->build(
-            '\\WpFluent\\QueryBuilder\\QueryObject',
+            '\\KaizenCoders\\WpFluent\\QueryBuilder\\QueryObject',
             array($sql, $bindings)
         )->getRawSql();
 
@@ -284,7 +284,7 @@ class QueryBuilderHandler
         $queryArr = $this->adapterInstance->$type($this->statements, $dataToBePassed);
         
         return  $this->container->build(
-            '\\WpFluent\\QueryBuilder\\QueryObject',
+            '\\KaizenCoders\\WpFluent\\QueryBuilder\\QueryObject',
             array($queryArr['sql'], $queryArr['bindings'])
         );
     }
@@ -428,7 +428,7 @@ class QueryBuilderHandler
 
     /**
      * @return mixed
-     * @throws \WpFluent\Exception
+     * @throws \KaizenCoders\WpFluent\Exception
      */
     public function delete()
     {
@@ -811,7 +811,7 @@ class QueryBuilderHandler
 
         // Build a new JoinBuilder class, keep it by reference so any changes made
         // in the closure should reflect here
-        $joinBuilder = $this->container->build('\\WpFluent\\QueryBuilder\\JoinBuilder', array($this->connection));
+        $joinBuilder = $this->container->build('\\KaizenCoders\\WpFluent\\QueryBuilder\\JoinBuilder', array($this->connection));
         $joinBuilder = & $joinBuilder;
         // Call the closure with our new joinBuilder object
         $key($joinBuilder);
@@ -837,7 +837,7 @@ class QueryBuilderHandler
 
             // Get the Transaction class
             $transaction = $this->container->build(
-                '\\WpFluent\\QueryBuilder\\Transaction',
+                '\\KaizenCoders\\WpFluent\\QueryBuilder\\Transaction',
                 array($this->connection)
             );
 
@@ -909,7 +909,7 @@ class QueryBuilderHandler
      */
     public function raw($value, $bindings = array())
     {
-        return $this->container->build('\\WpFluent\\QueryBuilder\\Raw', array($value, $bindings));
+        return $this->container->build('\\KaizenCoders\\WpFluent\\QueryBuilder\\Raw', array($value, $bindings));
     }
 
     /**

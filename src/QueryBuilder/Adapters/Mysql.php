@@ -1,4 +1,4 @@
-<?php namespace WpFluent\QueryBuilder\Adapters;
+<?php namespace KaizenCoders\WpFluent\QueryBuilder\Adapters;
 
 class Mysql extends BaseAdapter
 {

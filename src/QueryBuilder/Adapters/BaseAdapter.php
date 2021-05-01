@@ -1,13 +1,13 @@
-<?php namespace WpFluent\QueryBuilder\Adapters;
+<?php namespace KaizenCoders\WpFluent\QueryBuilder\Adapters;
 
-use WpFluent\Connection;
-use WpFluent\Exception;
-use WpFluent\QueryBuilder\Raw;
+use KaizenCoders\WpFluent\Connection;
+use KaizenCoders\WpFluent\Exception;
+use KaizenCoders\WpFluent\QueryBuilder\Raw;
 
 abstract class BaseAdapter
 {
     /**
-     * @var \WpFluent\Connection
+     * @var \KaizenCoders\WpFluent\Connection
      */
     protected $connection;
 

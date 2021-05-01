@@ -1,4 +1,4 @@
-<?php namespace WpFluent;
+<?php namespace KaizenCoders\WpFluent;
 
 class Exception extends \Exception
 {

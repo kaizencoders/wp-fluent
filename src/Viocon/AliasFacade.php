@@ -1,4 +1,4 @@
-<?php namespace Viocon;
+<?php namespace KaizenCoders\WpFluent\Viocon;
 
 /**
  * This class gives the ability to access non-static methods statically

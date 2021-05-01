@@ -1,6 +1,6 @@
 <?php
 
-namespace WpFluent\QueryBuilder;
+namespace KaizenCoders\WpFluent\QueryBuilder;
 
 class QueryObject
 {

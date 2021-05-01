@@ -1,0 +1,33 @@
+{
+    "name": "kaizencoders/wp-fluent",
+    "version": "1.0.0",
+    "description": "A lightweight, expressive database query builder for WordPress which can be referred to as a Database Abstraction Layer. WP Fluent uses the same **wpdb** instance and takes care of query sanitization, table prefixing and many other things with a unified API.",
+    "keywords": [
+        "wordpress",
+        "plugin",
+        "php",
+        "sql",
+        "query"
+    ],
+    "homepage": "https://github.com/kaizencoders/wp-fluent",
+    "type": "library",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "KaizenCoders",
+            "homepage": "https://kaizencoders.com",
+            "email": "hello@kaizencoders.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload" : {
+        "classmap": [
+            "src/"
+        ],
+        "psr-4" : {
+            "KaizenCoders\\WpFluent\\": "src/"
+        }
+    }
+}

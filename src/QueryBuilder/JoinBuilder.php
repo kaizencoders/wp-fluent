@@ -1,4 +1,4 @@
-<?php namespace WpFluent\QueryBuilder;
+<?php namespace KaizenCoders\WpFluent\QueryBuilder;
 
 class JoinBuilder extends QueryBuilderHandler
 {

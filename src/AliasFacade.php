@@ -1,6 +1,6 @@
-<?php namespace WpFluent;
+<?php namespace KaizenCoders\WpFluent;
 
-use WpFluent\QueryBuilder\QueryBuilderHandler;
+use KaizenCoders\WpFluent\QueryBuilder\QueryBuilderHandler;
 
 /**
  * This class gives the ability to access non-static methods statically

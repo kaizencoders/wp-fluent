@@ -1,4 +1,4 @@
-<?php namespace WpFluent;
+<?php namespace KaizenCoders\WpFluent;
 
 use WpFluent\QueryBuilder\QueryBuilderHandler;
 use WpFluent\QueryBuilder\Raw;

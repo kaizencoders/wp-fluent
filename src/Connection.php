@@ -1,6 +1,6 @@
-<?php namespace WpFluent;
+<?php namespace KaizenCoders\WpFluent;
 
-use Viocon\Container;
+use KaizenCoders\WpFluent\Viocon\Container;
 
 class Connection
 {
@@ -57,7 +57,7 @@ class Connection
         $this->setAdapter()->setAdapterConfig($config)->connect();
 
         // Create event dependency
-        $this->eventHandler = $this->container->build('\\WpFluent\\EventHandler');
+        $this->eventHandler = $this->container->build('\\KaizenCoders\\WpFluent\\EventHandler');
 
         if ($alias) {
             $this->createAlias($alias);
@@ -71,9 +71,9 @@ class Connection
      */
     public function createAlias($alias)
     {
-        class_alias('WpFluent\\AliasFacade', $alias);
+        class_alias('KaizenCoders\\WpFluent\\AliasFacade', $alias);
 
-        $builder = $this->container->build('\\WpFluent\\QueryBuilder\\QueryBuilderHandler', array($this));
+        $builder = $this->container->build('\\KaizenCoders\\WpFluent\\QueryBuilder\\QueryBuilderHandler', array($this));
 
         AliasFacade::setQueryBuilderInstance($builder);
     }
@@ -83,7 +83,7 @@ class Connection
      */
     public function getQueryBuilder()
     {
-        return $this->container->build('\\WpFluent\\QueryBuilder\\QueryBuilderHandler', array($this));
+        return $this->container->build('\\KaizenCoders\\WpFluent\\QueryBuilder\\QueryBuilderHandler', array($this));
     }
 
 
